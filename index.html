@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amirul Nashriq – Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #4A90E2;
+      --secondary-color: #50E3C2;
+      --bg-color: #F9FBFD;
+      --text-color: #333;
+      --muted-color: #666;
+      --card-bg: #FFFFFF;
+      --card-shadow: rgba(0, 0, 0, 0.1);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: var(--bg-color); color: var(--text-color); line-height: 1.6; scroll-behavior: smooth; }
+    a { color: var(--primary-color); text-decoration: none; transition: color 0.3s; }
+    a:hover { color: var(--secondary-color); }
+    img { max-width: 100%; display: block; }
+
+    /* Header */
+    header {
+      background: #FFFFFF;
+      box-shadow: 0 2px 4px var(--card-shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: transform 0.3s ease-in-out;
+    }
+    header.hidden {
+      transform: translateY(-100%);
+    }
+    nav .container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; }
+    nav .logo { font-family: 'Roboto', sans-serif; font-size: 1.5rem; font-weight: 600; color: var(--primary-color); }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav ul li a { font-weight: 500; }
+
+    /* Container */
+    .container { width: 90%; max-width: 1000px; margin: 0 auto; padding: 2rem 0; }
+
+    /* Hero */
+    #hero { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: #fff; text-align: center; padding: 6rem 2rem; }
+    #hero h1 { font-size: 3rem; margin-bottom: 0.5rem; font-family: 'Roboto', sans-serif; }
+    #hero p { font-size: 1.2rem; }
+    #hero .profile-pic { width: 250px; height: 250px; border-radius: 50%; border: 4px solid #fff; object-fit: cover; margin: 1rem auto; }
+
+    /* Sections */
+    section { margin-top: 4rem; }
+    section h2 { font-family: 'Roboto', sans-serif; font-size: 2rem; margin-bottom: 1rem; position: relative; padding-bottom: 0.5rem; }
+    section h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 50px; height: 3px; background: var(--primary-color); }
+
+    /* About */
+    #about .about-content { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
+    #about .about-text { flex: 1; }
+    #about .about-photo { flex: 1; max-width: 250px; }
+    #about .about-photo img { border-radius: 8px; }
+
+    /* Education & Experience Cards */
+    .card-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
+    .card { background: var(--card-bg); border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 8px var(--card-shadow); transition: transform 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { margin-bottom: 0.5rem; font-family: 'Roboto', sans-serif; }
+    .card p { color: var(--muted-color); font-size: 0.9rem; }
+    .card ul { margin-top: 0.5rem; list-style: disc inside; color: var(--muted-color); }
+
+    /* Skills */
+    .skills-list { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .skill { background: var(--primary-color); color: #fff; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; }
+
+    /* Projects */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
+
+    /* Contact */
+    .contact-info p { margin-bottom: 0.5rem; }
+    .contact-info a { word-break: break-all; }
+
+    /* Footer */
+    footer { text-align: center; padding: 2rem 0; font-size: 0.8rem; color: var(--muted-color); }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      #about .about-content { flex-direction: column; text-align: center; }
+      nav .container { flex-direction: column; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <div class="logo">Amirul Nashriq</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <img src="C:/Users/nash1/Downloads/PersonalPortfolio/Image/pfp.jpg" alt="Profile Photo" class="profile-pic">
+    <div class="container">
+      <h1>Amirul Nashriq Bin Amirrullah</h1>
+      <p>Final-year IT (Media Informatics) student at UniSZA</p>
+    </div>
+  </section>
+
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-photo">
+        <img src="C:/Users/nash1/Downloads/PersonalPortfolio/Image/Nash.jpg" alt="Profile Photo">
+      </div>
+      <div class="about-text">
+        <p>Final-year Bachelor of Information Technology (Media Informatics) student at Universiti Sultan Zainal Abidin with a strong foundation in web development, UI/UX design, and 3D animation. Experienced in building interactive systems such as a Hostel Management System and a 3D educational maze game using Unity. Eager to apply practical skills and gain hands-on industry experience through an internship from October 2025 until April 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="container">
+    <h2>Education</h2>
+    <div class="card-list">
+      <div class="card">
+        <h3>Bachelor of Information Technology (Media Informatics) with Honours</h3>
+        <p>Universiti Sultan Zainal Abidin | Oct 2022 – Present</p>
+        <p>CGPA: 3.17</p>
+      </div>
+      <div class="card">
+        <h3>Matriculation KPM (Science Physical)</h3>
+        <p>Perak Matriculation College | May 2020 – Mar 2022</p>
+        <p>CGPA: 3.42 | MUET: Band 4</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">PHP</span>
+      <span class="skill">SQL</span>
+      <span class="skill">C#</span>
+      <span class="skill">Java</span>
+      <span class="skill">Blender</span>
+      <span class="skill">Unity</span>
+      <span class="skill">Adobe Illustrator</span>
+      <span class="skill">Adobe Photoshop</span>
+      <span class="skill">Adobe Animate</span>
+      <span class="skill">Canva</span>
+      <span class="skill">Microsoft Office</span>
+    </div>
+  </section>
+
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="card project-item">
+        <h3>3DMazeGame: Geography Challenge</h3>
+        <p>Oct 2024 – Jul 2025</p>
+        <ul>
+          <li>Built a 3D educational maze game in Unity focused on Malaysian geography (SPM level)</li>
+          <li>Integrated quizzes within levels and designed local terrain models</li>
+        </ul>
+      </div>
+      <div class="card project-item">
+        <h3>Hostel Management System</h3>
+        <p>Dec 2023 – Feb 2024</p>
+        <ul>
+          <li>Developed a hostel management website using JSP, HTML/CSS, and MySQL backend</li>
+          <li>Implemented borrow/return functions and stakeholder presentations</li>
+        </ul>
+      </div>
+      <div class="card project-item">
+        <h3>VR of Malaysian Turtle</h3>
+        <p>Feb 2025 – Jul 2025</p>
+        <ul>
+          <li>The project focuses on identifying 3 turtle species that can be found in Malaysia using 3D models</li>
+          <li>The project was developed in Unity</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="container">
+    <h2>Experience</h2>
+    <div class="card-list">
+      <div class="card experience-item">
+        <h3>Assistant Administration (Part-Time)</h3>
+        <p>AMK Holidays Sdn Bhd, Shah Alam | Jun 2022 – Oct 2022</p>
+        <ul>
+          <li>Created promotional graphics for hotel websites</li>
+          <li>Managed hotel contact rate databases</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+  <h2>Contact</h2>
+  <div class="contact-info">
+    <p><strong>Email:</strong> <a href="mailto:nash150202@gmail.com">nash150202@gmail.com</a></p>
+    <p><strong>Phone:</strong> 018-2124163</p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/amirul-nashriq-77b7a5332/" target="_blank">linkedin.com/in/amirul-nashriq-77b7a5332</a></p>
+    <p><strong>My Project in multimedia:</strong> <a href="https://drive.google.com/drive/folders/1fwrAI2a0HBCiTrv-C0SFFuuQCvCom-J9?usp=sharing" target="_blank">View on Google Drive</a></p>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Amirul Nashriq Bin Amirrullah. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let lastScrollY = window.scrollY;
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > lastScrollY) {
+        header.classList.add('hidden');
+      } else {
+        header.classList.remove('hidden');
+      }
+      lastScrollY = window.scrollY;
+    });
+  </script>
+</body>
+</html>
